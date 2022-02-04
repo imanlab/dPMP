@@ -46,6 +46,7 @@ The complete dataset is contained in the folder ```dataset/```. It is made by RG
 - ```dataset/additional_segmented``` contains 505 addtional RGB images with the annotated bounding box extracted with Detectron2 for which the trajectory has not been collected.
 - ```dataset/rgb_tot_white``` merges the 2 previous folders.
 
+The complete dataset can be downloaded at this [link](https://drive.google.com/drive/folders/1pqWhZoc1yhz1er5fv8byUYzDjGO9Mdhm?usp=sharing)
 ### Code
 In the ```code/``` folder there are the scripts to treìain the Autoencoder and Variational Autoencoder models
 - ```code/Autoencoder```
