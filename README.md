@@ -7,10 +7,10 @@
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
   * [Set Up](#Set-Up)
+   * [Dataset](#Dataset)
+   * [Code](#Code)
 * [Usage](#usage)
-  *  [ProMPs training](#ProMPs-training)
 * [References](#references)
 * [Contact](#contact)
 
@@ -36,15 +36,33 @@ The second one is: Variational Auto Encoder + Multi Layer Perceptron model.
 ![VAE](img/VAE+MLP.png)
 
 ## Build With
+All the models are trained using [Tensorflow 2.7](https://pypi.org/project/tensorflow/) .
 
 ## Getting Started
 
-### Prerequisites
+### Dataset
+The complete dataset is contained in the folder ```dataset/```. It is made by RGB images and the annotations of the ProMs weights of the collected demonstrations in  ```dataset/annotations```. The RGB images are separated in 3 folders: 
+- ```dataset/rgb_segmented_white``` contains 252 RGB images with the annotated bounding box extracted with Detectron2 for which the trajectory has been collected.
+- ```dataset/additional_segmented``` contains 505 addtional RGB images with the annotated bounding box extracted with Detectron2 for which the trajectory has not been collected.
+- ```dataset/rgb_tot_white``` merges the 2 previous folders.
+
+### Code
+In the ```code/``` folder there are the scripts to treìain the Autoencoder and Variational Autoencoder models
+- ```code/Autoencoder```
+- ```code/VAE```
+
+and the scripts to train the 7 models (one for each joint) using repectively the AE or VAE
+
+- ```code/Models_AE```
+- ```code/Models_VAE```
+
 
 ## Usage
 
 ## References
+
 #### ProMPs:
+
 http://eprints.lincoln.ac.uk/id/eprint/25785/1/5177-probabilistic-movement-primitives.pdf
 
 ## Contact
