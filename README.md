@@ -25,6 +25,15 @@ The movement is predicted using movement primitives as encoding method so that o
 
 In particular the predicted policy is not deterministic but stochastic since the model is trained on a distribution of trajectories provided as demonstrations.
 
+Two baselines have been followed to predict the mean and covariance of the ProMps weights describing the trajectory of to reach a target berry.
+
+The first one is: Auto Encoder + Multi Layer Perceptron model.
+
+![AE](img/AE+MLP.png)
+
+The second one is: Variational Auto Encoder + Multi Layer Perceptron model.
+
+![VAE](img/VAE+MLP.png)
 
 ## Build With
 
