@@ -11,6 +11,7 @@
    * [Dataset](#Dataset)
    * [Code](#Code)
 * [Usage](#usage)
+* [Results](#results)
 * [References](#references)
 * [Contact](#contact)
 
@@ -80,6 +81,12 @@ or
 ```
 python code/Models_VAE/J1/train_test.py
 ```
+### Results
+
+Comparing the two architectures the one with the Variational Autoencoder performs better!
+
+
+![TEST](img/test.png)
 
 
 ## References
