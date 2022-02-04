@@ -14,10 +14,8 @@ class deep_ProMPs_2dmodel_RGBD(tf.keras.Model):
         # Define layers.
         self.x1 = layers.Dense(512)
         self.x2 = layers.LeakyReLU(0.2)
-        self.bn_1 = layers.BatchNormalization()
         self.x3 = layers.Dense(256)
         self.x4 = layers.LeakyReLU(0.2)
-        self.bn_2 = layers.BatchNormalization()
 
         # Mean prediction.
         self.xa = tf.keras.layers.Dense(units = 128, activation="tanh", kernel_regularizer=tf.keras.regularizers.l1_l2(l1=0.0, l2=0.0))
@@ -37,10 +35,8 @@ class deep_ProMPs_2dmodel_RGBD(tf.keras.Model):
 
         x = self.x1(inputs)
         x = self.x2(x)
-        x = self.bn_1(x)
         x = self.x3(x)
         x = self.x4(x)
-        x = self.bn_2(x)
         # 1 branch - Mean prediction
         x1 = self.xa(x)
         x1 = self.xb(x1)
