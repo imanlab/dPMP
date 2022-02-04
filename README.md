@@ -1,4 +1,5 @@
-# Title-of-the-project
+# Deep ProMPs learning for strawberry picking
+
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
@@ -7,61 +8,33 @@
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
+  * [Set Up](#Set-Up)
 * [Usage](#usage)
-* [Roadmap](#roadmap)
+  *  [ProMPs training](#ProMPs-training)
 * [References](#references)
 * [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+
 
 ## About The Project
 
-The purpose of this repository is to provide an easy and consistent way of documenting the projects at IML. This part of the readme can be used to define the overall problem statement of the research project. Feel free to modify the structure of readme as per the project requirements. 
+The project is about Probabilistic Movement Primitives prediction through Deep models. Everything is applied to the Agri-robotics framework, in particular to the problem of strawberry picking.
 
-### Built With
-This section should list any major frameworks that you built your project using (preferrably along with links). Please try to specify the versions.
+The particular task considered is the Reach to Pick task so the simple action of approaching a target ripe strawberry with a robotic arm. This task should be performed using as input simply the RGB image of the strawberry cluster from the home position.
 
-- **Operating system xx**
-- **Language xx.xx**
-- **ROS dist** 
+The movement is predicted using movement primitives as encoding method so that only a bunch of weights needs to be predicted by the deep neural network taking as input the image from the home position.
+
+In particular the predicted policy is not deterministic but stochastic since the model is trained on a distribution of trajectories provided as demonstrations.
+
+
+## Build With
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
-
-You may list down all the system requirements and dependencies here. 
-
-```
-```
-
-### Installation
-
-Instructions for cloning the repo and building the project files go here. 
-
-```
-```
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos would be great! You can also provide links to more resources. 
 
-## Roadmap
+## Contact
 
-This section can mention the milestones that have already been achieved and the proposed features/ miltestones, etc. 
-
-## References 
-
-The references used for your work (research papers, blogs, books,etc.) can be listed here. 
-
-## Contact 
-
-Provide a list of developers/maintainers email-ids of the repository so as to help resolve the issues future users may come across.
-
-
-## Acknowledgements
-
-If your work is an extension of an existing repository/research work, the original work can be mentioned here. 
-This template is inspired from a great template made available by @othneildrew at https://github.com/othneildrew/Best-README-Template/blob/master/README.md. 
+For any issues please contact Alessandra Tafuro at taffi98.at@gmail.com
