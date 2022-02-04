@@ -58,6 +58,28 @@ and the scripts to train the 7 models (one for each joint) using repectively the
 
 
 ## Usage
+To train or evaluate the AE or VAE model run:
+
+```
+python code/Autoencoder/train_test.py
+```
+or
+
+```
+python code/VAE/train_test.py
+```
+
+To train or evaluate the models for ProMPs prediciton of the first joint based on AE or VAE run:
+
+```
+python code/Models_AE/J1/train_test.py
+```
+or
+
+```
+python code/Models_VAE/J1/train_test.py
+```
+
 
 ## References
 
