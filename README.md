@@ -43,6 +43,9 @@ The second one is: Variational Auto Encoder + Multi Layer Perceptron model.
 
 ## Usage
 
+## References
+#### ProMPs:
+http://eprints.lincoln.ac.uk/id/eprint/25785/1/5177-probabilistic-movement-primitives.pdf
 
 ## Contact
 
