@@ -53,14 +53,15 @@ The complete dataset is contained in the folder ```dataset/```. It is made by RG
 
 The complete dataset can be downloaded at this [link](https://drive.google.com/drive/folders/1k7QSSXEPNbt2EQn0ZCS2IrFKZuag864N?usp=sharing)
 ### Code
-In the ```code/``` folder there are the scripts to treìain the Autoencoder and Variational Autoencoder models
+In the ```code/``` folder there are the scripts to train the Autoencoder and Variational Autoencoder models
 - ```code/Autoencoder```
 - ```code/VAE```
 
-and the scripts to train the 7 models (one for each joint) using repectively the AE or VAE
+and the scripts to train the 7 models (one for each joint) using repectively the AE or VAE or cVAE
 
 - ```code/Models_AE```
 - ```code/Models_VAE```
+- ```code/Models_cVAE```
 
 
 ## Usage
@@ -75,7 +76,7 @@ or
 python code/VAE/train_test.py
 ```
 
-To train or evaluate the models for ProMPs prediciton of the first joint based on AE or VAE run:
+To train or evaluate the models for ProMPs prediciton of the first joint based on AE or VAE or cVAE run:
 
 ```
 python code/Models_AE/J1/train_test.py
@@ -85,9 +86,15 @@ or
 ```
 python code/Models_VAE/J1/train_test.py
 ```
+
+or 
+```
+python code/Models_cVAE/J1/train_test.py
+```
+
 ### Results
 
-Comparing the two architectures the one with the Variational Autoencoder performs better!
+Comparing the three architectures the performances increase going from AE to VAE to cVAE models!
 
 
 ![TEST](img/test.png)
