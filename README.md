@@ -97,7 +97,15 @@ python code/Models_cVAE/J1/train_test.py
 Comparing the three architectures the performances increase going from AE to VAE to cVAE models!
 
 
-![TEST](img/test.png)
+| Joints      | Autoencoder     | Variational Autoencoder     | Error reduciton     | Conditional Variational Autoencoder     | Error reduciton     |
+| ----------- | --------------- | --------------------------- |-------------------- | --------------------------------------- | ------------------- | 
+| J1          | 0.000544        | 0.000304                    | - 44%               | 0.000132                                | - 56%               | 
+| J2          | 0.004899        | 0.001612                    | - 66%               | 0.001085                                | - 37.5%             | 
+| J3          | 0.009301        | 0.000456                    | - 95%               | 0.000146                                | - 67.9%             | 
+| J4          | 0.003711        | 0.002957                    | - 21%               | 0.000920                                | - 68.8%             | 
+| J5          | 0.002424        | 0.002302                    | - 4%                | 0.002284                                | - 0.9%              | 
+| J6          | 0.002901        | 0.002660                    | - 10%               | 0.001745                                | - 35%               | 
+| J7          | 0.002140        | 0.000824                    | - 61%               | 0.000687                                | - 16.6%             | 
 
 
 ## References
