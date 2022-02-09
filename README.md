@@ -7,11 +7,15 @@
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Set Up](#Set-Up)
+   * [Set Up](#Set-Up)
    * [Dataset](#Dataset)
    * [Code](#Code)
 * [Usage](#usage)
+    * [Joint Space](#Joint-Space)
+    * [Task Space](#Task-Space)
 * [Results](#results)
+    * [Joint Space](#Joint-Space)
+    * [Task Space](#Task-Space)
 * [References](#references)
 * [Contact](#contact)
 
@@ -40,19 +44,27 @@ The last one is: Variational Auto Encoder + Multi Layer Perceptron model conditi
 
 ![VAE](img/CVAE+MLP.png)
 
+All the baselines have been tested both on joint and in task space.
+
 ## Build With
+
 All the models are trained using [Tensorflow 2.7](https://pypi.org/project/tensorflow/) .
 
 ## Getting Started
 
 ### Dataset
+
 The complete dataset is contained in the folder ```dataset/```. It is made by RGB images and the annotations of the ProMs weights of the collected demonstrations in  ```dataset/annotations```. The RGB images are separated in 3 folders: 
 - ```dataset/rgb_segmented_white``` contains 252 RGB images with the annotated bounding box extracted with Detectron2 for which the trajectory has been collected.
 - ```dataset/additional_segmented``` contains 505 addtional RGB images with the annotated bounding box extracted with Detectron2 for which the trajectory has not been collected.
 - ```dataset/rgb_tot_white``` merges the 2 previous folders.
 
 The complete dataset can be downloaded at this [link](https://drive.google.com/drive/folders/1k7QSSXEPNbt2EQn0ZCS2IrFKZuag864N?usp=sharing)
+
+In the ```preprocessing/``` folder there are all the codes for the preprocessing of the collected images (segmentation) and trajectories.
+
 ### Code
+
 In the ```code/``` folder there are the scripts to train the Autoencoder and Variational Autoencoder models
 - ```code/Autoencoder```
 - ```code/VAE```
@@ -65,6 +77,7 @@ and the scripts to train the 7 models (one for each joint) using repectively the
 
 
 ## Usage
+
 To train or evaluate the AE or VAE model run:
 
 ```
@@ -75,6 +88,7 @@ or
 ```
 python code/VAE/train_test.py
 ```
+### Joint space
 
 To train or evaluate the models for ProMPs prediciton of the first joint based on AE or VAE or cVAE run:
 
@@ -91,8 +105,30 @@ or
 ```
 python code/Models_cVAE/J1/train_test.py
 ```
+The same applies for the other joints.
+
+### Task space
+
+To train or evaluate the models for ProMPs prediciton of the coordinate X based on AE or VAE or cVAE run:
+
+```
+python code/Models_AE_task/X/train_test.py
+```
+or
+
+```
+python code/Models_VAE_task/X/train_test.py
+```
+
+or 
+```
+python code/Models_cVAE_task/X/train_test.py
+```
+The same applies for the other coordinates and quaternions components.
 
 ### Results
+
+#### Joint space
 
 Comparing the three architectures the performances increase going from AE to VAE to cVAE models!
 
@@ -106,6 +142,21 @@ Comparing the three architectures the performances increase going from AE to VAE
 | J5          | 0.002424        | 0.002302                    | - 4%                | 0.002284                                | - 0.9%              | 
 | J6          | 0.002901        | 0.002660                    | - 10%               | 0.001745                                | - 35%               | 
 | J7          | 0.002140        | 0.000824                    | - 61%               | 0.000687                                | - 16.6%             | 
+
+#### Task space
+
+Comparing the three architectures the performances increase going from AE to VAE to cVAE models!
+
+
+| Joints      | Autoencoder     | Variational Autoencoder     | Error reduciton     | Conditional Variational Autoencoder     | Error reduciton     |
+| ----------- | --------------- | --------------------------- |-------------------- | --------------------------------------- | ------------------- | 
+| X           | 0.000544        | 0.000304                    | - 44%               | 0.000132                                | - 56%               | 
+| Y           | 0.004899        | 0.001612                    | - 66%               | 0.001085                                | - 37.5%             | 
+| Z           | 0.009301        | 0.000456                    | - 95%               | 0.000146                                | - 67.9%             | 
+| Q1          | 0.003711        | 0.002957                    | - 21%               | 0.000920                                | - 68.8%             | 
+| Q2          | 0.002424        | 0.002302                    | - 4%                | 0.002284                                | - 0.9%              | 
+| Q3          | 0.002901        | 0.002660                    | - 10%               | 0.001745                                | - 35%               | 
+| Q4          | 0.002140        | 0.000824                    | - 61%               | 0.000687                                | - 16.6%             | 
 
 
 ## References
