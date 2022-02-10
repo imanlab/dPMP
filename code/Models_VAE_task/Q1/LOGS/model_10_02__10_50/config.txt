@@ -1,0 +1,27 @@
+datetime                      <class 'datetime.datetime'>                                                                         
+os                            <module 'os' from '/Users/alessandratafuro/opt/anaconda3/envs/tf2_env/lib/python3.7/os.py'>         
+inspect                       <module 'inspect' from '/Users/alessandratafuro/opt/anaconda3/envs/tf2_env/lib/python3.7/inspect.py'>
+now                           10_02__10_50                                                                                        
+J_DIR                         /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_VAE_task/Q1 
+ROOT_DIR                      /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot                         
+IMAGE_PATH                    /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/dataset/rgb_segmented_white/
+ANNOTATION_PATH               /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/dataset/annotation_task/q1
+MODEL_FOLDER                  /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_VAE_task/Q1/MODELS
+MODEL_NAME                    model_10_02__10_50                                                                                  
+MODEL_PATH                    /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_VAE_task/Q1/MODELS/model_10_02__10_50
+OUTPUT_PATH                   /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_VAE_task/Q1/PLOTS
+LOSS_PATH                     /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_VAE_task/Q1/LOSS/model_10_02__10_50
+METRIC_PATH                   /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_VAE_task/Q1/METRIC
+LOG_DIR                       /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_VAE_task/Q1/LOGS/model_10_02__10_50
+ENCODER_MODEL_PATH            /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/VAE/MODEL_VAE      
+batch                         5                                                                                                   
+epochs                        3000                                                                                                
+lr                            0.0005                                                                                              
+random_state                  42                                                                                                  
+l1_reg                        0                                                                                                   
+l2_reg                        0                                                                                                   
+val_frac                      0.2                                                                                                 
+use_val_in_train              False                                                                                               
+N_test                        7                                                                                                   
+es                            {'enable': False, 'delta': 0, 'patience': 40, 'restore_best_weight': True}                          
+rl                            {'enable': True, 'factor': 0.99, 'min_lr': 1e-09, 'patience': 5}                                    
