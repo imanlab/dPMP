@@ -84,4 +84,4 @@ def My_metric(mean_pred, mean_true, cov_pred,cov_true):
 
     mse_mean = mean_squared_error(mean_true, mean_pred)
     mse_cov = mean_squared_error(cov_true, cov_pred)
-    return mse_cov + 0.5 *mse_mean
+    return mse_cov + mse_mean
