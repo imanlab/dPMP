@@ -1,0 +1,27 @@
+datetime                      <class 'datetime.datetime'>                                                                         
+os                            <module 'os' from '/Users/alessandratafuro/opt/anaconda3/envs/tf2_env/lib/python3.7/os.py'>         
+inspect                       <module 'inspect' from '/Users/alessandratafuro/opt/anaconda3/envs/tf2_env/lib/python3.7/inspect.py'>
+now                           09_02__18_08                                                                                        
+J_DIR                         /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_AE_task/Q2  
+ROOT_DIR                      /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot                         
+IMAGE_PATH                    /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/dataset/rgb_segmented_white/
+ANNOTATION_PATH               /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/dataset/annotation_task/q2
+MODEL_FOLDER                  /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_AE_task/Q2/MODELS
+MODEL_NAME                    model_09_02__18_08                                                                                  
+MODEL_PATH                    /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_AE_task/Q2/MODELS/model_09_02__18_08
+OUTPUT_PATH                   /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_AE_task/Q2/PLOTS
+LOSS_PATH                     /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_AE_task/Q2/LOSS/model_09_02__18_08
+METRIC_PATH                   /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_AE_task/Q2/METRIC
+LOG_DIR                       /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Models_AE_task/Q2/LOGS/model_09_02__18_08
+ENCODER_MODEL_PATH            /Users/alessandratafuro/Documents/Lincoln projects/M. Sc. Thesis/Real_robot/code/Autoencoder/MODEL  
+batch                         5                                                                                                   
+epochs                        3000                                                                                                
+lr                            0.0005                                                                                              
+random_state                  42                                                                                                  
+l1_reg                        0                                                                                                   
+l2_reg                        0                                                                                                   
+val_frac                      0.2                                                                                                 
+use_val_in_train              False                                                                                               
+N_test                        7                                                                                                   
+es                            {'enable': False, 'delta': 0, 'patience': 40, 'restore_best_weight': True}                          
+rl                            {'enable': True, 'factor': 0.99, 'min_lr': 1e-09, 'patience': 5}                                    
