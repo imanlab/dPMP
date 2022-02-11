@@ -134,7 +134,7 @@ Comparing the three architectures the performances increase going from AE to VAE
 
 RMSE(mean_traj)+ RMSE(cov_traj)
 
-| Joints      | Autoencoder     | Variational Autoencoder     | Error reduciton     | Conditional Variational Autoencoder     | Error reduciton     |
+| Joints      | Autoencoder     | Variational Autoencoder     | Error reduction     | Conditional Variational Autoencoder     | Error reduction     |
 | ----------- | --------------- | --------------------------- |-------------------- | --------------------------------------- | ------------------- | 
 | J1          | 0.000544        | 0.000304                    | - 44%               | 0.000132                                | - 56%               | 
 | J2          | 0.004899        | 0.001612                    | - 66%               | 0.001085                                | - 37.5%             | 
@@ -150,7 +150,7 @@ Comparing the three architectures the performances increase going from AE to VAE
 
 RMSE(mean_traj)+ RMSE(cov_traj)
 
-| Joints      | Autoencoder     | Variational Autoencoder     | Error reduciton     | Conditional Variational Autoencoder     | Error reduction     |
+| Joints      | Autoencoder     | Variational Autoencoder     | Error reduction     | Conditional Variational Autoencoder     | Error reduction     |
 | ----------- | --------------- | --------------------------- |-------------------- | --------------------------------------- | ------------------- | 
 | X           | 0.000127        | 0.000114                    | - 10%               | 0.000105                                | - 7.8%              | 
 | Y           | 0.001531        | 0.000297                    | - 80%               | 0.000079                                | - 73%               | 
