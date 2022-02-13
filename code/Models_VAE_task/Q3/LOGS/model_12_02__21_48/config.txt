@@ -1,0 +1,27 @@
+datetime                      <class 'datetime.datetime'>                                                                         
+os                            <module 'os' from '/usr/lib/python3.7/os.py'>                                                       
+inspect                       <module 'inspect' from '/usr/lib/python3.7/inspect.py'>                                             
+now                           12_02__21_48                                                                                        
+J_DIR                         /content/drive/MyDrive/Real_robot/code/Models_VAE_task/Q3                                           
+ROOT_DIR                      /content/drive/MyDrive/Real_robot                                                                   
+IMAGE_PATH                    /content/drive/MyDrive/Real_robot/dataset/rgb_segmented_white/                                      
+ANNOTATION_PATH               /content/drive/MyDrive/Real_robot/dataset/annotation_task/q3                                        
+MODEL_FOLDER                  /content/drive/MyDrive/Real_robot/code/Models_VAE_task/Q3/MODELS                                    
+MODEL_NAME                    model_12_02__21_48                                                                                  
+MODEL_PATH                    /content/drive/MyDrive/Real_robot/code/Models_VAE_task/Q3/MODELS/model_12_02__21_48                 
+OUTPUT_PATH                   /content/drive/MyDrive/Real_robot/code/Models_VAE_task/Q3/PLOTS                                     
+LOSS_PATH                     /content/drive/MyDrive/Real_robot/code/Models_VAE_task/Q3/LOSS/model_12_02__21_48                   
+METRIC_PATH                   /content/drive/MyDrive/Real_robot/code/Models_VAE_task/Q3/METRIC                                    
+LOG_DIR                       /content/drive/MyDrive/Real_robot/code/Models_VAE_task/Q3/LOGS/model_12_02__21_48                   
+ENCODER_MODEL_PATH            /content/drive/MyDrive/Real_robot/code/VAE/MODEL_VAE                                                
+batch                         5                                                                                                   
+epochs                        3000                                                                                                
+lr                            0.0005                                                                                              
+random_state                  42                                                                                                  
+l1_reg                        0                                                                                                   
+l2_reg                        0                                                                                                   
+val_frac                      0.2                                                                                                 
+use_val_in_train              False                                                                                               
+N_test                        7                                                                                                   
+es                            {'enable': False, 'delta': 0, 'patience': 40, 'restore_best_weight': True}                          
+rl                            {'enable': True, 'factor': 0.99, 'min_lr': 1e-09, 'patience': 5}                                    
