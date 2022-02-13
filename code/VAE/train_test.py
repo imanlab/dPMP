@@ -3,7 +3,7 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 from datagenerator import *
 import imageio
-from config import PLOT_PATH, IMG_DIR ,ENCODED_PATH,  IMAGES
+from config import PLOT_PATH, IMG_DIR ,ENCODED_PATH_ENCODER,ENCODED_PATH_DECODER,  IMAGES
 from pathlib import Path
 from model import CVAE,autoencoder
 from datagenerator import DatasetRGB
@@ -13,7 +13,7 @@ config = ConfigProto()
 config.gpu_options.allow_growth = True
 session = InteractiveSession(config=config)
 
-def train(img_dir,loss_path,model_path,batch_size = 32):
+def train(img_dir,loss_path,model_path_encoder,model_path_decoder,batch_size = 32):
     '''
     Function that does the training od the autoencoder
     :param img_dir: path of the dataset of images
@@ -60,10 +60,12 @@ def train(img_dir,loss_path,model_path,batch_size = 32):
     plt.savefig(loss_path + '/VAE_reconstruction_loss.png')
 
     #SAVE THE MODEL
-    tf.saved_model.save(cvae, model_path)
+   
+    cvae.encoder.save(model_path_encoder)
+    cvae.decoder.save(model_path_decoder)
 
 
-def test(encoded_path,img_dir,reconstructed_images_path):
+def test(model_path_encoder,model_path_decoder,img_dir,reconstructed_images_path):
     '''
     Funciton that tests the autoencoder
     :param encoded_path: path of the autoecoder model
@@ -71,7 +73,8 @@ def test(encoded_path,img_dir,reconstructed_images_path):
     :param bottleneck_path: path to save the bottleneck images
     :param reconstructed_images_path: path to save the reconstructed images+ the input images
     '''
-    cvae = tf.saved_model.load(encoded_path)
+    encoder = tf.saved_model.load(model_path_encoder)
+    decoder = tf.saved_model.load(model_path_decoder)
     print("Loading data...")
     dataset = DatasetRGB(rgb_dir = img_dir)
     dataset.prepare_data()
@@ -79,11 +82,6 @@ def test(encoded_path,img_dir,reconstructed_images_path):
 
     (_), (_), (X_test) = dataset.data
     RGB_test = X_test["RGB"]
-
-
-    encoder = cvae.encoder
-    decoder = cvae.decoder
-
 
     latent_mean,latent_var,latent_sample = encoder(RGB_test)
     decoded_imgs = decoder(latent_mean)
@@ -102,11 +100,12 @@ if __name__ == "__main__":
     '''
     # CREATE DIRECTORIES
     Path(PLOT_PATH).mkdir(exist_ok=True, parents=True)
-    Path(ENCODED_PATH).mkdir(exist_ok=True, parents=True)
+    Path(ENCODED_PATH_ENCODER).mkdir(exist_ok=True, parents=True)
+    Path(ENCODED_PATH_DECODER).mkdir(exist_ok=True, parents=True)
     Path(IMAGES).mkdir(exist_ok=True, parents=True)
     # TRAINING
-    train(batch_size=32, img_dir=IMG_DIR, loss_path=PLOT_PATH, model_path=ENCODED_PATH)
+    train(batch_size=32, img_dir=IMG_DIR, loss_path=PLOT_PATH, model_path_encoder=ENCODED_PATH_ENCODER, model_path_decoder=ENCODED_PATH_DECODER)
     '''
     TEST THE AUTOENCODER
     '''
-    test(encoded_path=ENCODED_PATH,img_dir=IMG_DIR,reconstructed_images_path=IMAGES)
+    test(model_path_encoder=ENCODED_PATH_ENCODER, model_path_decoder=ENCODED_PATH_DECODER,img_dir=IMG_DIR,reconstructed_images_path=IMAGES)
