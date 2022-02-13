@@ -150,15 +150,15 @@ Comparing the three architectures the performances increase going from AE to VAE
 
 RMSE(mean_traj)+ RMSE(cov_traj)
 
-| Joints      | Autoencoder     | Variational Autoencoder     | Error reduction     | Conditional Variational Autoencoder     | Error reduction     |
+| Coordinates | Autoencoder     | Variational Autoencoder     | Error reduction     | Conditional Variational Autoencoder     | Error reduction     |
 | ----------- | --------------- | --------------------------- |-------------------- | --------------------------------------- | ------------------- | 
-| X           | 0.000127        | 0.000114                    | - %              | 0.000105                                | - 7.8%              | 
-| Y           | 0.001531        | 0.000705                    | - 53%               | 0.000079                                | - 73%               | 
-| Z           | 0.000092        | 0.000012                    | - 88%               | 0.000017                                | - 0.5%              | 
-| Q1          | 0.000153        | 0.000057                    | - 68%               | 0.000072                                | - 30%               | 
-| Q2          | 0.002424        | 0.00041                     | - 83%               | 0.000025                                | - 50%               | 
-| Q3          | 0.000115        | 0.000037                    | - 80%               | 0.000012                                | - 45%               | 
-| Q4          | 0.000078        | 0.000036                    | - 68%               | 0.000039                                | - 35%               | 
+| X           | 0.000140        | 0.000140                    | - 0%                |                             |              | 
+| Y           | 0.001531        | 0.000705                    | - 53%               |                                |                | 
+| Z           | 0.000092        | 0.000012                    | - 88%               |                               |               | 
+| Q1          | 0.000153        | 0.000057                    | - 68%               |                               |                | 
+| Q2          | 0.002424        | 0.00041                     | - 83%               |                              |                | 
+| Q3          | 0.000115        | 0.000037                    | - 80%               |                               |                | 
+| Q4          | 0.000078        | 0.000036                    | - 68%               |                                |               | 
 
 
 ## References
