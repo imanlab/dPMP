@@ -54,7 +54,8 @@ All the models are trained using [Tensorflow 2.7](https://pypi.org/project/tenso
 
 ### Dataset
 
-The complete dataset is contained in the folder ```dataset/```. It is made by RGB images and the annotations of the ProMs weights of the collected demonstrations in  ```dataset/annotations```. The RGB images are separated in 3 folders: 
+The complete dataset is contained in the folder ```dataset/```. It is made by RGB images and the annotations of the ProMs weights in joint and task space of the collected demonstrations in  ```dataset/annotations``` and ```dataset/annotations_task```. The RGB images are separated in 3 folders: 
+
 - ```dataset/rgb_segmented_white``` contains 252 RGB images with the annotated bounding box extracted with Detectron2 for which the trajectory has been collected.
 - ```dataset/additional_segmented``` contains 505 addtional RGB images with the annotated bounding box extracted with Detectron2 for which the trajectory has not been collected.
 - ```dataset/rgb_tot_white``` merges the 2 previous folders.
@@ -136,13 +137,13 @@ RMSE(mean_traj)+ RMSE(cov_traj)
 
 | Joints      | Autoencoder     | Variational Autoencoder     | Error reduction     | Conditional Variational Autoencoder     | Error reduction     |
 | ----------- | --------------- | --------------------------- |-------------------- | --------------------------------------- | ------------------- | 
-| J1          | 0.000544        | 0.000139                    | - 74%               | 0.000132                                | - 56%               | 
-| J2          | 0.004899        | 0.001445                    | - 70%               | 0.001085                                | - 37.5%             | 
-| J3          | 0.009301        | 0.000963                    | - 89%               | 0.000146                                | - 67.9%             | 
-| J4          | 0.003711        | 0.001939                    | - 47%               | 0.000920                                | - 68.8%             | 
-| J5          | 0.002424        | 0.002357                    | - 2.7%              | 0.002284                                | - 0.9%              | 
-| J6          | 0.002901        | 0.002660                    | - %               | 0.001745                                | - 35%               | 
-| J7          | 0.002140        | 0.000543                    | - 74%               | 0.000687                                | - 16.6%             | 
+| J1          | 0.000544        | 0.000139                    | - 74%               |                             | - %               | 
+| J2          | 0.004899        | 0.001445                    | - 70%               |                              | - %             | 
+| J3          | 0.009301        | 0.000963                    | - 89%               |                               | - %             | 
+| J4          | 0.003711        | 0.001939                    | - 47%               |                              | - %             | 
+| J5          | 0.002424        | 0.002357                    | - 2.7%              |                              | - %              | 
+| J6          | 0.002901        | 0.002660                    | - %               |                               | - %               | 
+| J7          | 0.002140        | 0.000543                    | - 74%               |                          | - %             | 
 
 #### Task space
 
@@ -152,13 +153,13 @@ RMSE(mean_traj)+ RMSE(cov_traj)
 
 | Coordinates | Autoencoder     | Variational Autoencoder     | Error reduction     | Conditional Variational Autoencoder     | Error reduction     |
 | ----------- | --------------- | --------------------------- |-------------------- | --------------------------------------- | ------------------- | 
-| X           | 0.000140        | 0.000140                    | - 0%                |                             |              | 
-| Y           | 0.001531        | 0.000705                    | - 53%               |                                |                | 
-| Z           | 0.000092        | 0.000012                    | - 88%               |                               |               | 
-| Q1          | 0.000153        | 0.000057                    | - 68%               |                               |                | 
-| Q2          | 0.002424        | 0.00041                     | - 83%               |                              |                | 
-| Q3          | 0.000115        | 0.000037                    | - 80%               |                               |                | 
-| Q4          | 0.000078        | 0.000036                    | - 68%               |                                |               | 
+| X           | 0.000140        | 0.000140                    | - 0%                |                             | - %              | 
+| Y           | 0.001531        | 0.000705                    | - 53%               |                                | - %                 | 
+| Z           | 0.000092        | 0.000012                    | - 88%               |                               | - %                | 
+| Q1          | 0.000153        | 0.000057                    | - 68%               |                               | - %                 | 
+| Q2          | 0.002424        | 0.00041                     | - 83%               |                              | - %                 | 
+| Q3          | 0.000115        | 0.000037                    | - 80%               |                               | - %                 | 
+| Q4          | 0.000078        | 0.000036                    | - 68%               |                                | - %                | 
 
 
 ## References
